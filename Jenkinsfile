@@ -26,13 +26,7 @@ pipeline {
 				    sh 'mvn test'
 			    }
 			}
-			post {
-				always {
-				    dir ('java-maven-app'){
-					    junit 'target/surefire-reports/*.*xml'
-				    }
-				}
-			}
+			
 		}
 		stage ('run') {
 			steps {
